@@ -1,0 +1,25 @@
+.section-metrics {
+  display: flex;
+  gap: 8rem;
+}
+
+.section-metrics > h2 {
+  font-size: 14rem;
+  color: var(--primary);
+}
+
+.section-metrics > p {
+  background: var(--tertiary-400);
+  color: var(--tertiary-200);
+  border-radius: 50%;
+  font-size: 12rem;
+  padding: 2rem 8rem;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.color-secondary {
+  color: var(--secondary);
+}

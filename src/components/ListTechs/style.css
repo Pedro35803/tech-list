@@ -1,0 +1,39 @@
+.section-listTecs {
+  margin-top: 64rem;
+}
+
+.section-listTecs-metrics {
+  margin-bottom: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section-listTecs-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+
+.section-listTecs-void {
+  border: 0 solid var(--tertiary-400);
+  border-top-width: 1px;
+  border-radius: 8rem;
+  height: 172rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-listTecs-void p {
+  color: var(--tertiary-300);
+  font-size: 16rem;
+  line-height: 22.4rem;
+  align-items: center;
+}
+
+.section-listTecs-void .text-bold {
+  font-weight: bold;
+}
