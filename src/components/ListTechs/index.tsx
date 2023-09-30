@@ -5,13 +5,28 @@ import { TecsType } from "../../types/commom";
 import { PropsType } from "./props";
 import "./style.css";
 
-export default function ListTechs({ list }: PropsType) {
+export default function ListTechs({
+  list,
+  callbackUpdateTec,
+  callbackDeleteTec,
+}: PropsType) {
   const hasListContent = list.length !== 0;
+  console.log(list.length)
   return (
     <div className="section-listTecs">
       <div className="section-listTecs-metrics">
-        <MetricsData text="Tecnologias criadas" color="primary" textNumber={"0"} />
-        <MetricsData text="Concluídas" color="secondary" textNumber={"0"} />
+        <MetricsData
+          text="Tecnologias criadas"
+          color="primary"
+          textNumber={"0"}
+          key={1}
+        />
+        <MetricsData
+          text="Concluídas"
+          color="secondary"
+          textNumber={"0"}
+          key={2}
+        />
       </div>
       <div
         className={
@@ -19,7 +34,13 @@ export default function ListTechs({ list }: PropsType) {
         }
       >
         {hasListContent ? (
-          list.map((obj: TecsType) => <Card data={obj} />)
+          list.map((obj: TecsType) => (
+            <Card
+              data={obj}
+              updateData={callbackUpdateTec}
+              deleteData={callbackDeleteTec}
+            />
+          ))
         ) : (
           <>
             <p className="text-bold">

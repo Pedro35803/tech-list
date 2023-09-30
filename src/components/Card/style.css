@@ -1,0 +1,37 @@
+.section-card {
+    gap: 12rem;
+    padding: 16rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-text,
+.card-text-active {
+    color: var(--tertiary-100);
+    line-height: 19.6rem;
+    font-size: 14rem;
+}
+
+.card-text-active {
+    text-decoration: line-through;
+    color: var(--tertiary-300);
+}
+
+.checkbox {
+    all: unset;
+    cursor: pointer;
+    width: 17.45rem;
+    height: 17.45rem;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+}
+
+.checkbox:checked {
+    border: 2px solid var(--secondary-dark);
+    background-image: url("../../img/circle-confirm.svg");
+}
+
+.img-delete {
+    height: 19.5rem;
+    cursor: pointer;
+}
