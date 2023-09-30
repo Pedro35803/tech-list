@@ -1,0 +1,42 @@
+.section-input {
+    gap: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+input,
+button {
+    padding: 16rem;
+    border-radius: 8rem;
+}
+
+input {
+    background: var(--tertiary-500);
+    color: var(--tertiary-300);
+    width: 638rem;
+    border: 1rem;
+}
+
+input::placeholder {
+    font-size: 16rem;
+}
+
+button {
+    background: var(--primary-dark);
+    color: var(--tertiary-100);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+button p {
+    line-height: 19.6rem;
+    font-weight: bold;
+    font-size: 14rem;
+}
+
+button img {
+    height: 16rem;
+    width: 16rem;
+}
