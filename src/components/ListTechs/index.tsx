@@ -10,8 +10,8 @@ export default function ListTechs({ list }: PropsType) {
   return (
     <div className="section-listTecs">
       <div className="section-listTecs-metrics">
-        <MetricsData text="Tecnologias criadas" color="primary" number={0} />
-        <MetricsData text="Concluídas" color="secondary" number={0} />
+        <MetricsData text="Tecnologias criadas" color="primary" textNumber={"0"} />
+        <MetricsData text="Concluídas" color="secondary" textNumber={"0"} />
       </div>
       <div
         className={
