@@ -6,23 +6,26 @@ import "./style.css";
 export default function Search({ callbackAddTec }: PropsType) {
   const [value, setValue] = useState("");
 
-  const onClick = () => {
-    callbackAddTec(value);
-    setValue("");
+  const submit = (event: any) => {
+    event.preventDefault();
+    if (value.trim() !== "") {
+      callbackAddTec(value);
+      setValue("");
+    }
   };
 
   return (
-    <div className="section-input">
+    <form onSubmit={submit} className="section-input" noValidate>
       <input
         type="text"
         placeholder="Adicione uma nova tecnologia"
         onChange={(e) => setValue(e.target.value)}
         value={value}
       />
-      <button onClick={onClick}>
+      <button>
         <p>Criar</p>
         <img src={circleIcon} />
       </button>
-    </div>
+    </form>
   );
 }

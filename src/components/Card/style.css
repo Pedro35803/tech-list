@@ -28,7 +28,9 @@
 
 .checkbox:checked {
     border: 2px solid var(--secondary-dark);
+    background: var(--secondary-dark);
     background-image: url("../../img/circle-confirm.svg");
+    background-position: center;
 }
 
 .img-delete {

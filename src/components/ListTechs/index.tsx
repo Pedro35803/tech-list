@@ -11,7 +11,7 @@ export default function ListTechs({
   callbackDeleteTec,
 }: PropsType) {
   const hasListContent = list.length !== 0;
-  console.log(list.length)
+  console.log(list.length);
   return (
     <div className="section-listTecs">
       <div className="section-listTecs-metrics">
@@ -34,13 +34,15 @@ export default function ListTechs({
         }
       >
         {hasListContent ? (
-          list.map((obj: TecsType) => (
-            <Card
-              data={obj}
-              updateData={callbackUpdateTec}
-              deleteData={callbackDeleteTec}
-            />
-          ))
+          list
+            .sort((obj: TecsType) => (obj.complete ? 1 : -1))
+            .map((obj: TecsType) => (
+              <Card
+                data={obj}
+                updateData={callbackUpdateTec}
+                deleteData={callbackDeleteTec}
+              />
+            ))
         ) : (
           <>
             <p className="text-bold">
