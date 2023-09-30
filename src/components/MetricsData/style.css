@@ -10,7 +10,7 @@
 .section-metrics > p {
   background: var(--tertiary-400);
   color: var(--tertiary-200);
-  border-radius: 50%;
+  border-radius: 999px;
   font-size: 12rem;
   padding: 2rem 8rem;
 }

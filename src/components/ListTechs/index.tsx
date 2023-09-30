@@ -7,24 +7,30 @@ import "./style.css";
 
 export default function ListTechs({
   list,
+  tecsTotal,
+  tecsComplete,
   callbackUpdateTec,
   callbackDeleteTec,
 }: PropsType) {
   const hasListContent = list.length !== 0;
-  console.log(list.length);
+
+  const textTecsComplete = () => {
+    return tecsTotal === 0 ? "0" : `${tecsComplete} de ${tecsTotal}`;
+  }
+
   return (
     <div className="section-listTecs">
       <div className="section-listTecs-metrics">
         <MetricsData
           text="Tecnologias criadas"
           color="primary"
-          textNumber={"0"}
+          textNumber={String(tecsTotal)}
           key={1}
         />
         <MetricsData
           text="Concluídas"
           color="secondary"
-          textNumber={"0"}
+          textNumber={textTecsComplete()}
           key={2}
         />
       </div>

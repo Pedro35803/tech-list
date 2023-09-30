@@ -13,9 +13,12 @@ function App() {
   const [listTecs, setListTecs] = useState<TecsType[]>(valueInit);
 
   const filterId = (id: string) => listTecs.filter((obj) => obj.id != id);
-  
+
   const string = JSON.stringify(listTecs);
   localStorage.setItem("tecs", string);
+
+  const numTecs = listTecs.length;
+  const numTecsComplete = listTecs.filter((obj) => obj.complete).length;
 
   const addItemInList = (value: string) => {
     const obj = { id: uuidv4(), name: value, complete: false };
@@ -38,6 +41,8 @@ function App() {
       <InputAdd callbackAddTec={addItemInList} />
       <ListTechs
         list={listTecs}
+        tecsTotal={numTecs}
+        tecsComplete={numTecsComplete}
         callbackUpdateTec={updateTec}
         callbackDeleteTec={deleteTec}
       />
