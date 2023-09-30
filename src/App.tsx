@@ -7,9 +7,9 @@ import ListTechs from './components/ListTechs';
 function App() {
   return (
     <main>
-      <h1>Minha lista de Tecnologias</h1>
-      <Input></Input>
-      <ListTechs></ListTechs>
+      <h1 className='title'>Minha lista de Tecnologias</h1>
+      <Input />
+      <ListTechs />
     </main>
   );
 }

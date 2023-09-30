@@ -1,4 +1,13 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title {
+  color: var(--primary);
   font-size: 40rem;
-  background: var(--primary);
+  font-weight: bold;
+  padding: 72rem;
 }
