@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 
 import InputAdd from "./components/InputAdd";
@@ -37,15 +37,21 @@ function App() {
 
   return (
     <main>
-      <h1 className="title">Minha lista de Tecnologias</h1>
-      <InputAdd callbackAddTec={addItemInList} />
-      <ListTechs
-        list={listTecs}
-        tecsTotal={numTecs}
-        tecsComplete={numTecsComplete}
-        callbackUpdateTec={updateTec}
-        callbackDeleteTec={deleteTec}
-      />
+      <header className="header">
+        <div className="container">
+          <h1 className="title">Minha lista de Tecnologias</h1>
+          <InputAdd callbackAddTec={addItemInList} />
+        </div>
+      </header>
+      <div className="container">
+        <ListTechs
+          list={listTecs}
+          tecsTotal={numTecs}
+          tecsComplete={numTecsComplete}
+          callbackUpdateTec={updateTec}
+          callbackDeleteTec={deleteTec}
+        />
+      </div>
     </main>
   );
 }

@@ -1,14 +1,29 @@
-main {
-  min-height: 100vh;
+.header {
+  background: var(--tertiary-700);
+  padding-top: 72rem;
+  position: relative;
+}
+
+.header::after {
+  background: var(--tertiary-600);
+  content: '';
+  height: 11%;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.container {
   max-width: 736rem;
-  width: 90%;
   margin: auto;
+  width: 90%;
 }
 
 .title {
   color: var(--primary);
   font-size: 40rem;
   font-weight: bold;
-  margin: 72rem 0 53rem;
+  margin-bottom: 53rem;
   text-align: center;
 }

@@ -27,11 +27,6 @@
   box-sizing: border-box;
 }
 
-/* @font-face {
-  font-family: Inter;
-  src: url(./fonts/Inter-Variable.ttf) format("truetype");
-} */
-
 html {
   font-size: 6.25%;
 }
@@ -39,4 +34,5 @@ html {
 body {
   font-family: var(--font-primary);
   background: var(--tertiary-600);
+  min-height: 100vh;
 }

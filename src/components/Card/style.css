@@ -1,4 +1,7 @@
 .section-card {
+    background: var(--tertiary-500);
+    border: 1px solid var(--tertiary-400);
+    border-radius: 8rem;
     gap: 12rem;
     padding: 16rem;
     display: flex;
@@ -34,6 +37,6 @@
 }
 
 .img-delete {
-    height: 19.5rem;
+    height: 18rem;
     cursor: pointer;
 }
